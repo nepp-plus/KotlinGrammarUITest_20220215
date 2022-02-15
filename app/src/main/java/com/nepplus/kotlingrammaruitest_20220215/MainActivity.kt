@@ -20,8 +20,12 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "관리자님 환영합니다.", Toast.LENGTH_SHORT).show()
 
             }
+            else if ( inputId != "admin") {
+                Toast.makeText(this, "아이디가 잘못되었습니다.", Toast.LENGTH_SHORT).show()
+            }
             else {
-                Toast.makeText(this, "로그인에 실패했습니다.", Toast.LENGTH_SHORT).show()
+//                로그인에 실패했고 / 아이디는 맞게 넣었다. => 비번만 틀렸다고 간주하자.
+                Toast.makeText(this, "비밀번호가 잘못되었습니다.", Toast.LENGTH_SHORT).show()
             }
 
         }
